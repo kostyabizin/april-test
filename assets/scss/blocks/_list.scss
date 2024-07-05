@@ -1,0 +1,39 @@
+.post-list {
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.post-list.grid-view {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	@media screen and (max-width: 992px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media screen and (max-width: 625px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	
+}
+
+.post-list.flex-view {
+	display: flex;
+	flex-direction: column;
+}
+
+.post-list .post-card {
+	width: 100%;
+}
+
+.post-card {
+	padding: 1rem;
+	border-radius: .5rem;
+	border: 1px solid var(--primapy-dark);
+	&__title {
+		margin-top: 0;
+	}
+
+	&__link:hover {
+		color: var(--primapy-red);
+		transition: color .2s ease;
+	}
+}

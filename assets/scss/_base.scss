@@ -1,0 +1,109 @@
+:root {
+	--primapy-dark: #1E2A46;
+	--primapy-light: #F5F5F5;
+	--primapy-red: #FF6666;
+}
+
+* {
+	outline: none;
+	color: inherit;
+	line-height: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+
+img, svg {
+	display: inline-block;
+	max-width: 100%;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	font-style: normal;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	color: var(--primapy-dark);
+	background-color: var(--primapy-light);
+}
+
+body {
+	&::-webkit-scrollbar {
+		width: .8rem;
+	}
+	&::-webkit-scrollbar-track {
+		background-color: var(--primapy-dark);
+	}
+  	&::-webkit-scrollbar-thumb {
+		background-color: var(--primapy-red);
+		border-radius: .2rem;
+	}	
+}
+
+.button {
+	display: inline-flex;
+	padding: 1rem;
+	color: var(--primapy-red);
+	background-color: var(--primapy-light);
+	border: 1px solid var(--primapy-red);
+	border-radius: .5rem;
+	text-decoration: none;
+	&:not(:disabled):hover {
+		color: var(--primapy-light);
+		background-color: var(--primapy-red);
+		cursor: pointer;
+		transition: all .2s ease;
+	}
+
+	&:disabled {
+		opacity: .5;
+	}
+}
+
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100dvh;
+}
+
+main {
+	flex: 1 0 auto;
+	padding: 1rem 0;
+}
+
+.container {
+	width: calc(100% - 10rem);
+	max-width: 95dvw;
+	margin: 0 auto;
+	@include hg() {
+		width: calc(100% - 5rem);
+	}
+	@include md() {
+		width: calc(100% - 2.5rem);
+	}
+}
+
+.reset-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.state-block {
+	width: 100%;
+	padding: 3rem 0;
+	text-align: center;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.back-link {
+	padding: .5rem;
+	border: 1px solid var(--primapy-dark)
+}

@@ -1,0 +1,26 @@
+.toggle-view {
+	display: flex;
+	justify-content: flex-end;
+	gap: .5rem;
+	margin-top: 2rem;
+	&__button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		border: 0;
+		background-color: transparent;
+		cursor: pointer;
+		svg {
+			width: 1.5rem;
+			height: 1.5rem;
+			color: var(--primapy-dark);
+		}
+
+		&.active {
+			svg { 
+				color: var(--primapy-red);
+			}
+		}
+	}
+}
