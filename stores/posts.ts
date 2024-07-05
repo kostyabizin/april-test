@@ -10,7 +10,6 @@ interface Post {
 	id: number
 	title: string
 	body: string
-	category: string
 }
 
 export const usePostsStore = defineStore('posts', () => {
